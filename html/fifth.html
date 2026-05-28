@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凌晨一点的猫</title>
+</head>
+<body>
+    <form action="" method="get">
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <input type="number" name="age">
+        <input type="date" name="birthday">
+        <input type="datetime-local" name="birthday">
+        <!-- name属性除了具有采集数据的功能之外，还具有分组的功能-->
+        <!-- 这里的name=sex表示这三个单选按钮之间属于同一个组sex，同一个组内的单选按钮只能同时选一个-->
+        <!-- 需要注意的是：如果input标签type为radio或checkbox时，
+            只要标签上存在checked属性，那么该标签就会出现选中状态-->
+        <!-- value 属性的核心作用是：定义表单提交时，发送给服务器的真实数据。
+            在标准的 HTML 表单数据交互中，数据是以键值对（Key-Value Pair）的形式进行传输的：
+            name 属性充当数据的键（Key）。
+            value 属性充当数据的值（Value）-->
+        <input type="radio" value="M" name="sex" checked>男
+        <input type="radio" value="F" name="sex">女
+        <input type="radio" value="C" name="sex">其他
+        <!--多选-->
+        <input type="checkbox" value="1" name="channel" checked>报纸
+        <input type="checkbox" value="2" name="channel">杂志
+        <input type="checkbox" value="3" name="channel">网络
+        <input type="file" name="head">
+        <input type="hidden" name="名称">
+        <!--当input的type为submit时，按钮可以提交表单，提交的表单
+            通过name属性采集数据-->
+        <input type="submit" value="按钮">
+    </form>
+</body>
+</html>

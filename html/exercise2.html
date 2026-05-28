@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lullaby</title>
+</head>
+<body>
+    <form action="" method="get">
+        <div>
+            <label for="username">账&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</label>
+            <input id="username" type="text" name="username">
+        </div>
+        <div>
+            <!--&nbsp; 转义字符-->
+            <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>
+            <input id="password" type="password" name="password">
+        </div>
+        <div>
+            <label for="confirmPassword">确认密码</label>
+            <input id="confirmPassword" type="password" name="confirmPassword">
+        </div>
+        <div>
+            <label>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</label>
+            <input type="radio" value="M" name="sex" checked>男
+            <input type="radio" value="F" name="sex">女
+            <input type="radio" value="O" name="sex">其他
+        </div>
+        <div>
+            <label>国&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;籍</label>
+                <select name="country">
+                    <option value="">请选择</option>
+                    <option value="CN">中国</option>
+                    <option value="USA">美国</option>
+                </select>
+        </div>
+        <div>
+            <input type="submit" value="登录">
+        </div>
+    </form>
+</body>
+</html>

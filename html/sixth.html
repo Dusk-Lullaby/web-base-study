@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lullaby</title>
+</head>
+<body>
+    <!-- label标签和span标签都具有范围选择的功能 -->
+    <label>这是标题</label>
+    <label>
+        <!--文本域-->
+        <textarea readonly rows="10" cols="50">
+            我已阅读XXX协议，并同意遵守
+        </textarea>
+    </label>
+
+    <form action="" method="get">
+        <div>
+            <!--只读-->
+            <input type="text" value="admin" readonly>
+            <!--禁用-->
+            <input type="text" value="admin" disabled>
+        </div>
+
+        <div>
+            <!-- for属性一定是一个input输入框的ID值
+                表示label标签被点击时，对应的input输入框获得焦点 -->
+            <label for="input1">账号：</label>
+            <input id=input1 type="text" name="username">
+        </div>
+
+        <div>
+            <!--下拉列表-->
+            <select name="sex">
+                <option value="">请选择</option>
+                <option value="M">男</option>
+                <option value="F">女</option>
+                <option value="O">其他</option>
+            </select>
+        </div>
+    </form>
+</body>
+</html>
