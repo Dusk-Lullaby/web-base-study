@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lullaby</title>
+</head>
+<body>
+    <!--controls属性控制页面上是否显示音频的操作控件
+        autoplay属性表示音频在就绪后马上播放
+        loop属性表示音频结束后重新播放
+        preload的值：
+        auto - 当页面加载后载入整个音频
+        metadata - 当页面加载后只载入数据元
+        none - 当页面加载后不载音频-->
+    <audio controls="controls" autoplay="autoplay" preload="auto" loop="loop">
+        <source src=".mp3" />
+        <source src=".OGG" />
+        <source src=".wav" />
+        浏览器不支持该音频格式
+    </audio>
+    <video src="" controls="controls" autoplay="autoplay" preload="auto"></video>
+
+    <input list="id">
+    <datalist id="id">
+        <option>男</option>
+        <option>女</option>
+        <option>其他</option>
+    </datalist>
+</body>
+</html>
