@@ -1,0 +1,63 @@
+/*
+    虽然仅定义字体时显得重复，但这种写法在前端开发中很常见，主要出于以下两个工程原因：
+
+    消除浏览器默认样式差异（防御性编程）
+    不同的浏览器对 html（根元素）和 body（文档主体）的默认样式解析存在历史遗留的微小差异。
+    为了保证跨浏览器的绝对一致性，开发者在做样式重置（CSS Reset）时，
+    习惯将最高层级的全局属性同时绑定到这两个节点上，防止某些极端情况下的继承断裂。
+
+    与其他全局属性合并
+    开发者通常不仅在此处设置字体，
+    还会设置 margin: 0; padding: 0; height: 100%; 等。
+    对于高度和盒模型相关的属性，html 和 body 往往都需要明确声明。
+    为了方便，所有的全局基础设定就会被统一写在 html, body { ... } 之下。
+*/
+/*容器中的元素可以从容器中继承CSS样式*/
+html,
+body,
+input {
+    /*font-family: 华文楷体;*/
+    /*font-size: 50px;*/
+    /*斜体*/
+    /*font-style: italic;*/
+    /*font-weight: 200;*/
+
+    /*复合属性*/
+    /*font: italic bold 50px 华文楷体;*/
+}
+
+/*label和span默认情况下是没有宽度的，不能直接设置宽度，
+必须将它们变成块元素或者行内的块元素，才能设置宽度和高度*/
+label {
+    /*display属性表示元素的展示方式*/
+    display: inline-block;
+    /*宽度*/
+    width: 100px;
+    /*对齐方式*/
+    text-align: justify;
+    text-align-last: justify;
+}
+
+p {
+    /*首行缩进*/
+    text-indent: 36px;
+}
+
+#center {
+    /*背景颜色*/
+    background-color: antiquewhite;
+    /*背景图片，这里的url是相对定位，参照物是css文件本身*/
+    background-image: url("../imgs/bg.jpg");
+    /*背景图片不重复，默认重复*/
+    background-repeat: no-repeat;
+    /*从给定位置开始使用图片背景*/
+    background-position: 20px 20px;
+    /*!*复合属性*!*/
+    /*background: antiquewhite url("../imgs/bg.jpg") 20px 20px no-repeat;*/
+    /*高度*/
+    height: 100px;
+    /*行高*/
+    line-height: 100px;
+    /*文本装饰*/
+    text-decoration: underline;
+}

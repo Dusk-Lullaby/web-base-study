@@ -1,0 +1,12 @@
+/*ID选择器*/
+#a {
+    color: blue;
+}
+/*类选择*/
+.content {
+    color: pink;
+}
+/*标签选择器就是使用标签名来选择元素*/
+div {
+    color: red; /*文本字体颜色*/
+}
