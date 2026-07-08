@@ -8,7 +8,7 @@ body {
     padding: 0;
 }
 
-div {
+.s {
     height: 100px;
     /*!*边框风格*!*/
     /*border-style: solid;*/
@@ -16,6 +16,32 @@ div {
     /*border-color: rgba(255, 166, 201, 0.5);*/
     /*!*边框粗细*!*/
     /*border-width: 12px;*/
-
     border: 1px solid red;
+    /*顺时针方向，上右下左*/
+    margin: 10px 20px 30px 40px;
+    /*顺时针方向，上右下左*/
+    padding: 10px 20px 30px 40px;
+}
+
+/*ID选择器*/
+.f1,
+.f2 {
+    width: 200px;
+    height: 120px;
+    border: 1px solid red;
+}
+.f1 {
+    float: left;
+}
+.f2 {
+    float: right;
+}
+
+.box {
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.c {
+    clear: both;
 }
