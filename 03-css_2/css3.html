@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS新特性</title>
+    <style>
+        #border {
+            width: 200px;
+            height: 200px;
+            background-color: black;
+            border-radius: 10px;
+            /*box-shadow: inset 2px 2px 2px 2px red;*/
+            /*线性渐变*/
+            /*background-image: linear-gradient(to right top, red, green, blue);*/
+            /*径向渐变*/
+            background-image: radial-gradient(circle, red 5%, yellow 15%, blue 60%);
+        }
+
+        .text1 {
+            /*文本阴影和盒子阴影的区别在于：文本阴影无内外之分，且文本阴影没有阴影大小的设置*/
+            text-shadow: 2px 2px 2px red;
+        }
+
+        .text2 {
+            width: 100px;
+            text-shadow: 2px 2px 2px red;
+            /*文本溢出时不换行*/
+            white-space: nowrap;
+            /*元素溢出部分隐藏*/
+            overflow: hidden;
+            /*文本溢出部分使用省略号显示*/
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <div id="border">
+
+    </div>
+    <div class="text1">文本阴影</div>
+    <div class="text2">这是一段很长的文字</div>
+</body>
+</html>
