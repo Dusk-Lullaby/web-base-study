@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标事}件</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        /*鼠标悬浮box上时，颜色由红色变为绿色*/
+        /*#box:hover {*/
+        /*    background-color: green;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+</body>
+<script type="text/javascript">
+    let box = document.getElementById("box");
+    // 鼠标悬浮在元素上（冒泡）
+    box.onmouseover = function() {
+        box.style.background = "green";
+    }
+    // mouseenter（不冒泡），鼠标进入内部
+    box.onmouseenter = function() {
+        box.style.background = "green";
+    }
+    // 鼠标离开离开元素
+    box.onmouseout = function () {
+        box.style.background = "red";
+    }
+</script>
+</html>

@@ -7,3 +7,4 @@
 1. html
 2. CSS美化页面
 3. CSS3及页面布局
+4. JavaScript基础

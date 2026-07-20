@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作符</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    let a = 1;
+    let b = 2;
+    console.log(a++);
+    console.log(a);
+    console.log(++a);
+    console.log(a);
+    a += b;
+    console.log(a);
+    // 在Java中两个整数相除，所得的一定是整数
+    // 但在JavaScript中，所得的可能是小数
+    let res = a / b;
+    console.log(res);
+    console.log(a % b);
+
+    let c = "2";
+    // 两个等号进行比较，只比较内容是否相同
+    console.log(c == b);
+    // 三个等号进行比较，比较内容是否相同的同时，还要检查类型
+    console.log(c === b);
+    // 有一个等号的不等于，只比较内容是否相同
+    console.log(b != c);
+    // 有两个等号的不等于,比较内容是否相同的同时，还要检查类型
+    console.log(b !== c);
+
+    // 逻辑与
+    let s1 = a > 1 && b === c;
+    // 逻辑或
+    let s2 = a > 1 || b === c;
+    // 逻辑非
+    let s3 = !a > 1;
+    console.log(s1 + " " + s2 + " " + s3);
+</script>
+</html>

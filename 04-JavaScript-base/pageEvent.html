@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="username" self="abc">
+    </div>
+    <div>
+        <input type="password" id="password">
+    </div>
+    <div>
+        <!--onclick表示开启所在元素的点击事件-->
+        <input type="button" value="点击" onclick="login()">
+    </div>
+</body>
+<script type="text/javascript">
+    function showValue() {
+        // document表示一个文档对象，是JavaScript内置对象，不需要new，直接就可以使用
+        // document主要提供的功能就是操作页面元素，比如创建元素、查找元素
+        let input = document.getElementById("username");
+        // 凡是写在标签上的，都是属于标签的属性
+        console.log(input.value);
+        // 自定义属性需要使用方法来获取值
+        console.log(input.getAttribute("self"));
+    }
+
+    let input = document.getElementById("username");
+    // 给ID为username标签添加一个获得焦点事件
+    input.onfocus = function () {
+        console.log("input输入框获得了焦点");
+    }
+    // 给ID为username标签添加一个失去焦点事件
+    input.onblur = function () {
+        if (input.value === "") {
+            console.log("input输入框没有进行任何的输入");
+        } else {
+            console.log(input.value);
+        }
+    }
+
+    // 这里的参数e表示event，是一个事件对象
+    input.onkeydown = function(e) {
+        // 主要用于登录页面中用户输入信息完毕后,用enter进行登录
+        if (e.code == 'Enter') {
+            login();
+        }
+    }
+
+    document.getElementById("password").onkeydown = function (e) {
+        if (e.code == 'Enter') {
+            login();
+        }
+    }
+
+    function login() {
+        console.log("正在登陆中");
+    }
+
+    // 键盘按下后释放
+    input.onkeyup = function (e) {
+        if (e.code === "KeyW") {
+            console.log("松开W");
+        }
+    }
+
+    // 按键盘
+    input.onkeypress = function (e) {
+        if (e.code === "enter") {
+            login();
+        }
+    }
+</script>
+</html>

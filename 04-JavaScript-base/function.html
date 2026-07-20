@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    // public int sum(int a, int b) {
+    //      return a + b;
+    // }
+    // 没有类型
+    function sum(a,b) {
+        return a + b;
+    }
+    function show(a) {
+        console.log(a);
+    }
+    show(sum(1,2));
+
+    /**
+     * 在JavaScript中，一个函数的返回值也可以是另一个函数
+     * @param a
+     * @param b
+     * @param c
+     * @returns {function(*): *}
+     */
+    function calc(a, b, c) {
+        let res = a + b;
+        return function (d) {
+            return res + c * d;
+        }
+    }
+    // 此时需要注意的是，calc函数执行的结果是一个函数
+    // 也就是说，在JavaScript中，变量可以存储一个函数
+    // 在这种情况，把变量当成一个函数即可
+    let s = calc(1, 2, 3);
+    console.log(s(4));
+    // 闭包
+    console.log(calc(1,2,3)(4));
+</script>
+</html>

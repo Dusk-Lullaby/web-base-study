@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>输入内容改变事件</title>
+</head>
+<body>
+    <input type="text" id="text">
+
+    <select id="sex">
+        <option>男</option>
+        <option>女</option>
+        <option>其他</option>
+    </select>
+
+    <input type="file" id="file">
+</body>
+<script type="text/javascript">
+    let text = document.getElementById("text");
+    // 在输入内容时，按下enter或者元素失去焦点时才会触发
+    text.onchange = function () {
+        console.log("change->" + text.value);
+    }
+    // 在输入内容改变时，立即触发，与是否按下enter无关
+    text.oninput = function () {
+        console.log("input->" + text.value);
+    }
+
+    let sex = document.getElementById("sex");
+    sex.onchange = function () {
+        console.log("change=>" + sex.value);
+    }
+    sex.oninput = function () {
+        console.log("input=>" + sex.value);
+    }
+
+    let file = document.getElementById("file");
+    file.onchange = function () {
+        console.log("change=>" + file.files);
+    }
+    file.oninput = function () {
+        console.log("input=>" + file.files);
+    }
+</script>
+</html>
