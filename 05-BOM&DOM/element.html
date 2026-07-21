@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>element</title>
+</head>
+<body>
+    <div id="box">
+        <!--该位置处有一个enter键-->
+        <div>
+            <input type="text">
+        </div>
+        <a href="javascript: void(0)">超链接1</a>
+        <a href="javascript: void(0)">超链接2</a>
+        <a href="javascript: void(0)">超链接3</a>
+        <a href="javascript: void(0)">超链接4</a>
+        <a href="javascript: void(0)">超链接5</a>
+    </div>
+<a href="javascript: void(0)">超链接5</a>
+</body>
+<script type="text/javascript">
+    let box = document.getElementById("box");
+    // 父元素,元素也就是标签
+    console.log(box.parentElement);
+    // 下一级子元素
+    let children = box.children;
+    console.log(children);
+    // 第一个子元素
+    console.log(box.firstElementChild);
+    // 最后一个子元素
+    console.log(box.lastElementChild);
+    // 第一个子元素的下一个同级元素
+    console.log(box.firstElementChild.nextElementSibling);
+    // 第一个子元素的上一个同级元素
+    console.log(box.firstElementChild.previousElementSibling);
+</script>
+</html>

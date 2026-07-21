@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>date</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    // 创建日期对象,默认时间为系统当前时间
+    let now = new Date();
+    // 获取年份
+    let year = now.getFullYear();
+    // 获取月份,月份在0~11之间
+    let month = now.getMonth() + 1;
+    // 获取日期是当前月的第几天
+    let date = now.getDate();
+    // 获取小时数
+    let hour = now.getHours();
+    // 获取分钟数
+    let minute = now.getMinutes();
+    // 获取秒数
+    let second = now.getSeconds();
+    let time = year + "-" + zerofill(month, 2) + "-" + zerofill(date, 2) + " " + zerofill(hour, 2) + ":" + zerofill(minute, 2) + ":" + zerofill(second, 2);
+    console.log(time);
+    // 获取当前日期是一周的第几天，一周的开始是周日，值为0
+    let weekday = now.getDay();
+    console.log(weekday);
+
+    now.setMonth(month);
+    now.setDate(0);
+    // 需要注意，在取当前月最大天数时，需要将月份重新设置，日期设置为0
+    console.log(now.getMonth() + " " + now.getDate());
+
+    function zerofill(num, targetLen) {
+        let str = num + "";
+        while (str.length < targetLen) {
+            str = "0" + str;
+        }
+        return str;
+    }
+</script>
+</html>

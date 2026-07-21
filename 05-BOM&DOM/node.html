@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>node</title>
+</head>
+<body>
+    <div id="box">
+        <!--该位置处有一个enter键-->
+        <div>
+            <input type="text">
+        </div>
+        <a href="javascript: void(0)">超链接1</a>
+        <a href="javascript: void(0)">超链接2</a>
+        <a href="javascript: void(0)">超链接3</a>
+        <a href="javascript: void(0)">超链接4</a>
+        <a href="javascript: void(0)">超链接5</a>
+    </div>
+    <a href="javascript: void(0)">超链接5</a>
+</body>
+<script type="text/javascript">
+    let box = document.getElementById("box");
+    // 父节点
+    console.log(box.parentNode);
+    // 文本内容包括enter键所在的内的换行,注释都属于节点
+    let childNodes = box.childNodes;
+    console.log(childNodes);
+    // 第一个子节点
+    console.log(box.firstChild);
+    // 最后一个字节点
+    console.log(box.lastChild);
+
+    // 第一个字节点
+    let first = childNodes[0];
+    console.log(first.nextSibling);
+    // 最后一个字节点
+    let last = box.lastChild;
+    console.log(last.previousSibling);
+</script>
+</html>

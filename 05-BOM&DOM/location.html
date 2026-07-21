@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>location</title>
+</head>
+<body>
+    <!--javascript: void(0)表示点击超链接时不会做任何事情 -->
+    <a href="javascript: void(0)" onclick="showAddress()">显示地址栏信息</a>
+    <a href="javascript: void(0)" onclick="refresh()">刷新页面</a>
+    <a href="javascript: void(0)" onclick="changePage()">替换新页面</a>
+</body>
+<script type="text/javascript">
+    function showAddress() {
+        console.log(location.host);
+        console.log(location.hostname);
+        console.log(location.href);
+    }
+
+    function refresh() {
+        location.reload();
+    }
+
+    function changePage() {
+        location.replace("page2.html");
+    }
+</script>
+</html>
