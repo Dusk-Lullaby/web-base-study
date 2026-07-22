@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格刷新</title>
+</head>
+<body>
+    <input type="button" value="查询" id="searchBtn">
+    <table>
+        <thead>
+        <tr>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>年龄</td>
+        </tr>
+        </thead>
+        <tbody id="dataBox">
+
+        </tbody>
+    </table>
+</body>
+<script type="text/javascript">
+    let stus = [{
+        name: "张三1",
+        sex: "男",
+        age: 20
+    },{
+        name: "张三2",
+        sex: "男",
+        age: 20
+    },{
+        name: "张三3",
+        sex: "男",
+        age: 20
+    },{
+        name: "张三4",
+        sex: "男",
+        age: 20
+    },]
+
+    let btn = document.getElementById("searchBtn");
+    btn.onclick = function () {
+        let dataBox = document.getElementById("dataBox");
+        // 获取table标签
+        let table = dataBox.parentElement;
+        // 将tbody从DOM树中移除
+        dataBox.remove();
+        // 创建tbody标签
+        dataBox = document.createElement("tbody");
+        dataBox.setAttribute("id", "dataBox");
+        table.appendChild(dataBox);
+
+        for (let i = 0; i < stus.length; i++) {
+            // 创建tr标签
+            let tr = document.createElement("tr");
+            // 创建td标签
+            let td = document.createElement("td");
+            td.textContent = stus[i].name;
+            // 将td追加到tr的末尾
+            tr.appendChild(td);
+            td = document.createElement("td");
+            td.textContent = stus[i].sex;
+            // 将td追加到tr的末尾
+            tr.appendChild(td);
+            td = document.createElement("td");
+            td.textContent = stus[i].age;
+            // 将td追加到tr的末尾
+            tr.appendChild(td);
+
+            dataBox.appendChild(tr);
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>节点样式</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ddd;
+        }
+
+        .active {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="a"></div>
+    <div id="box active"></div>
+</body>
+<script type="text/javascript">
+    let div = document.getElementById("a");
+    div.style.height = "50px";
+    div.style.background = "red";
+    // div.className = "box";
+</script>
+</html>

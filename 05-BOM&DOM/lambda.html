@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>箭头表达式</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+
+    function calculate(a, b) {
+        let promise = new Promise((resolve, reject) => {
+            // 异常情况处理，使用reject函数进行拒绝
+            if (b === 0) {
+                reject(new Error("除数不能为0"));
+            // 成功处理的情况使用resolve函数进行处理
+            } else {
+                resolve(a / b);
+            }
+        })
+
+        // 这里的response接收的值就是promise对象中resolve函数的参数值
+        promise.then(response => {
+            console.log("处理成功 " + response);
+        })
+        // 这里的error接收的值就是promise对象中reject函数的参数值
+        promise.catch(error => {
+            console.log("处理失败 " + error);
+        })
+    }
+    calculate(2, 1);
+    calculate(2, 0);
+</script>
+</html>
